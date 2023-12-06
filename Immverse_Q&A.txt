@@ -1,0 +1,38 @@
+Question 1: What is Pandas, and why is it commonly used in data cleaning tasks?
+Answer: Pandas is a Python library used for working with data sets. It has functions for analyzing, cleaning, exploring, and manipulating data.
+
+Question 2: Given a DataFrame with missing values, how would you check for missing values in each column and count the total number of missing values?
+Answer: We can use the isnull() method to check for missing values in each column of a DataFrame. To count the total number of missing values in each column, you can then use the sum() function. Example: df.isnull().sum().
+
+Question 3:How can you remove duplicates from a DataFrame while retaining the first occurrence of each unique row?
+Answer: We can remove duplicates from a DataFrame while retaining the first occurrence of each unique row using the drop_duplicates method in Pandas. Example: df.drop_duplicates().
+
+Question 4: If you have a DataFrame with a column containing string values, how can you convert all the values in that column to lowercase?
+Answer: We can convert all the values in a column of a DataFrame to lowercase using the str.lower() method. Example: df['Column_A'] = df['Column_A'].str.lower().
+
+Question 5: How do you replace missing values in a DataFrame with a specific value, like 0, for a particular column?
+Answer: We can replace missing values in a DataFrame with a specific value, such as 0, for a particular column using the fillna() method. Example: df['Column_A'] = df['Column_A'].fillna(0).
+
+Question 6: If you have a DataFrame with a datetime column, how can you extract the year, month, and day into separate columns?
+Answer: We can extract the year, month, and day into separate columns using the 'dt'. 
+Example:df['Year'] = df['Date_Column'].dt.year
+df['Month'] = df['Date_Column'].dt.month
+df['Day'] = df['Date_Column'].dt.day
+
+Question 7: How can you filter rows in a DataFrame where a specific column's values meet a certain condition (e.g., all rows where 'age' is greater than 30)?
+Answer: We can filter rows in a DataFrame based on a specific column's values using boolean indexing. Example: filtered_df = df[df['Age'] > 30].
+
+Question 8: What is the purpose of the .apply() function in Pandas, and how would you use it to create a new column based on values from existing columns?
+Answer: The apply() function in Pandas is used to apply a function along the axis of a DataFrame or Series. It allows us  to transform data based on custom functions.
+
+Question 9: Suppose you want to merge two DataFrames, 'df1' and 'df2,' on a common column 'key.' How would you perform this merge operation in Pandas?
+Answer: We can perform a merge operation to combine two DataFrames based on a common column using the merge() function. Example: merged_df = pd.merge(df1, df2, on='key', how='inner').
+
+Question 10: You have a DataFrame with a column containing messy text data. How can you clean and standardize the text data (e.g., remove punctuation and convert to lowercase) in that column?
+Answer: We can use string manipulation methods in Pandas along with the apply() function.
+Example: To remove punctuation:-
+translator = str.maketrans('', '', string.punctuation)
+text = text.translate(translator)
+
+To convert to lowercase:-
+text = text.lower().
